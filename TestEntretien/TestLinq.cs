@@ -17,7 +17,7 @@ namespace TestEntretien
             Dictionary<string, int> b = new Dictionary<string, int>()
             {
                 {"a",10 },{"c",22},{"b",7896}
-            };
+            }; 
         }
 
         /// <summary>
@@ -31,6 +31,10 @@ namespace TestEntretien
                 new List<int>() { 45, 2, 1, 4, 2, 2, 100 },
                 new List<int>() { 45, 2, 1, 4, 2, 2 }
             };
+
+            var result = datas.Select( (row,index) => new { index , row} );
+
+            
         }
 
         /// <summary>

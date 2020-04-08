@@ -8,7 +8,7 @@ namespace TestEntretien
         {
             Console.WriteLine("starting..");
 
-            //TestAlgo.GroupAnagram();
+            // TestAlgo.GroupAnagram();
             TestLinq.IndexAddition();
             //TestRefacto_3.Run();
 

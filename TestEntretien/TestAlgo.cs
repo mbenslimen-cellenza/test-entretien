@@ -18,7 +18,26 @@ namespace TestEntretien
             Console.WriteLine("GroupAnagram start");
             string[] input = { "reza","eat", "tea", "tan", "ate", "nat", "bat", "bta", "azer" };
 
-           
+
+            var orderdByList = input.Select(s =>
+            {
+                var chars = s.ToCharArray().OrderBy(c=>c).ToArray();
+
+                return new {original = s, formatted = string.Join("", chars)};
+            });
+
+            var groupedItems = orderdByList.GroupBy(str => str.formatted);
+
+            foreach (var grouped in groupedItems)
+            {
+                Console.WriteLine(grouped.Key);
+
+                foreach (var item in grouped)
+                {
+                    Console.WriteLine($"    -  {item.original}");
+                }
+            }
+
         }
 
         public static void SortInt()
